@@ -1,0 +1,670 @@
+9JAVASCRIPT - O que aprendi no Curso em Vídeo?
+
+Módulo A
+
+- Video 01
+
+>> O que é o JavaScript? <<
+
+# Client x Server
+Dispositivos são "clients" que usam e acessam dados de servidores.
+"Server" fornecem os dados e informações para o "client".
+
+Existem tecnologias para "Client" e "Server".
+
+# Tecnologias Relacionadas ao JavaScript
+Os websites são criadas por 3 tecnologias(se tratando daquilo que o "client" está vendo) que são HTML, CSS E JavaScript.
+- HTML: Responsável pelo Conteúdo e sua organização(justifição, inserção de imagens, etc.
+- CSS: Responsável pelo Estilo e diposição pela página.
+- JavaScript: Responsável pela Interação. 
+Elas compõem a parte de "client" na maioria dos websites. 
+
+
+- Video 03 
+
+>> Primeiros Passos << 
+
+# Como Aprender..
+
+- Veja os vídeos;
+- Leia livors;
+- Anote o que acha importante;
+- Converse com outras pessoas;
+- Pratique e pense em projetos proprios;
+
+# Livros Recomendados:
+- JavaScript - O guia definitivo
+- JavaScript - Guia do Progamador
+- Guia de Referência Mozilla e ECMA
+
+
+- Video 04 
+
+# Primeiros Scripts
+
+*Nomes de arquivos para web são sempre salvos em letra minúscula.
+
+Códigos deste vídeo:
+- HTML 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.o">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> ####### </title>
+    <style>
+	body {
+	   }
+	h1{
+	}
+    </style>
+</head>
+<body>
+	<h1> Hello World! </h1>
+	<p> ############################## </p>
+	<script>
+		window.alert('aaaaaaaa')
+		window.confirm('aaaaaaa')
+		window.prompt('aaaaaaaa')
+	</script>
+</body>
+</html>
+
+
+Módulo B
+
+Vídeo 05
+
+>> Tipos de Dados e Variáveis <<
+
+# Comentários
+
+// é utilizado para comentários em uma única linha de código
+/*  */ é utilizado para compentátios de mais de uma linha de código.
+
+# Variável
+- Espaço na memória que é resevado para receber algum tipo de dado/valor, que chamamos de atribuição.
+- No JavaScript moderno se usa as palavas "var" ou "let" para definir uma variável.
+- Essas variáveis precisam ser nomeadas para serem identificadas. O que chamamos de 'identificadores'.
+- Para declarar cadeias de caracteres (palavras/frases), o que chamamos de strings, pode-se usar "aspas duplas", 'aspas simples' e `crase`.
+Exemplo: var nome1 = "Wanderson" / var nome2 = 'Benjamim'/ var nome3 = `Jessica`
+Para o JS existe diferenças na utilização de cada uma delas. 
+
+# Identificadores (nomes das variáveis)
+Regras para nomear as variáveis:
+- Podem começar com letra, $ ou _
+- Não podem começar com Números
+- Pode utilizar letras ou números
+- Pode utilizar acentos ou símbolos
+- Não pode conter espaços
+- Não podem ser palavras reservadas (ex:var, prompt, alert)
+
+# Dicas para declaração de variáveis
+- Letras MAIÚSCULAS e minúculas fazem diferença
+- Utilizar nomes coerentes para as variáveis
+
+# Tipos de Dados
+
+- "number": Números Inteiros(sem casas decimais) e Reais (com casas decimais).
+O JS trata os números de forma diferente colocando eles no mesmo TIPO DE DADOS
+- "string": Cadeias de caracteres (nomes, numeros e símbolos)
+- "boolean": true e false
+
+O Node JS tem um comamndo chamado "typeof" que mostra no terminal qual tipo de variável foi declarada.
+
+NODE JS
+- Pode abrir pelo menu Iniciar ou pela opção Terminal do seu editor de código.
+- Ter atenção no número de terminais abertos para não causar lentidão no seu navegador. 
+- A única forma de fechar o terminal é com o comanto "exit". E é necessário fechar um de cada vez.
+
+
+Video 06
+
+>> Manipulação de Dados <<
+
+Criar nova pasta: 
+- class06; copiar o arquivo exer001 e renomear para exer002;
+- abrir exer002 e remover as linhas a baixo:
+window.alert("My first message") //show on the scream a message box
+window.confirm("Are you enjoying programming") //show on the scream a box with buttons 
+
+- Seguir para o proximo passo:
+
+# Declarando Variáveis
+
+O que for digitado no prompt vai ser inserido na variável. 
+Ex:var nome = window.prompt('What is your name?')
+
+Logo em seguida, faça o alert mostrar uma mensagem com o nome digitado. 
+ex: window.alert('Nice to meet you, ' + nome + '!')
+
+Obs: O sinal + é para juntar palavras. Neste caso chama-se concatenação.
+Obs1: O sinal + também é para soma.
+
+- Para que o sinal + seja uma soma, ele precisa receber dois valores "number". 
+- Para que o sinal + seja uma concatenação, ele precisa receber uma "string".
+
+-- O comando window.prompt retorna uma "string" para o usuário. 
+Para fazer uma soma neste caso é necessário fazer uma conversão de String>>Number.
+
+- Os comandos para converter String>>Number são:
+
+- Number.parsInt(n) - Para números inteiros
+- Number.parsFloat(n) - Para números Reais
+
+Ex.1: Para números INTEIROS
+var n1 = Number.parseInt(window.prompt('Type a number, please.'))
+var n2 = Number.parseInt(window.prompt('Type another number, please.'))
+
+Ex.4: Para números REAIS
+var n1 = Number.parseFloat(window.prompt('Type a number, please.'))
+var n2 = Number.parseFloat(window.prompt('Type another number, please.'))
+
+Ex.3: Para qualquer tipo de número
+var n1 = Number(window.prompt('Type a number, please.'))
+var n2 = Number(window.prompt('Type another number, please.'))
+
+- Os comandos para converter Number>>String são:
+
+- String(n): 
+- n.toString() 
+
+Para você chamar uma variável para formar um frase, pode usar o seguinte comando: 
+- ${nnn} - chamamos de place holder
+
+Outras:
+s.length - diz quantos caracteres tem a string
+Ex:  var nome = window.prompt('What is is your name?')
+     document.write(`Your name has ${nome.length} letters`)
+
+s.toUpperCase() - coloca em letras MAIÚSCULAS
+Ex: document.writeln(`Your name in capital letters is ${nome.toUpperCase()}`)
+
+s.toLowerCase() - coloca em letras minúsculas
+Ex: document.write(`Your name in lower case is ${nome.toLowerCase()}`)
+
+
+Outros comandos para números:
+.toFixed(): Para mover a casa decimal
+.toFixed().replace('.', ','): Para mudar o ponto por vírgula
+
+.toLocaleString('pt-BR', {style: 'currency': currency: 'BRL'})
+
+
+Video 07
+
+>> Operadores - Parte I<< 
+
+# Tipos de operadores
+
+- Aritiméticos 
+- Atribuição
+- Relacionais
+- Lógicos 
+- Ternário
+
+
+# Aritiméticos 
++ soma
+- subtração
+* multiplicação
+/ divisão real(números decimais)
+% Resto da divisão inteira
+** potência (5²)
+
+# Precedência
+
+- Operações aritiméticas que sempre serão realizadas primeio. 
+Ex: 5+3/2= 6.5 (neste exemplo a divisão real foi realizada primeio por conta da ordem de pressedência).
+Para realizar primeio a soma, é necessario colocá-la entre parênteses.
+Ex: (5+3)/2 = 4
+
+- A Ordem de precedência é a seguinte:
+- () (Parênteses)
+- ** (Potências)
+- * / % (Multiplicação, Divisão e Resto da divisão) Caso mais de um desses operadores estiverem na mesma expressão, você deve resolvela da esquerda para direita.
+- + - (Soma e Subtração)
+
+# Atribuição Simples
+
+= Recebe
+
+#Auto-atribuições
+
+Ex:
+var n=3
+n=n+4 (n passará a ser 7)ou n+=4 (simplificando)
+n=n-5 ou n-=5 
+n=n*4 ou n*=4
+n=n/2 ou n/=2
+n=n**2 ou n**=2
+n=n%5 ou n%=5
+
+Obs: A sintaxe simplificada só funciona se a variável for a mesma que está recebendo.
+
+# Incremento
+
+var x=5
+Ex: x=x+1 (x=6)
+    x=x-1 (x=5)
+Podemos usar o incremento x++ e x-- ou ++x e --x
+
+
+Video 08
+
+>> Operadores - Parte II <<
+
+# Relacionais 
+
+> Maior que
+< Menor que
+>= Maior igual 
+<= Menor igual 
+== Igual
+!= Diferente (Não igual)
+
+- O resultado de uma expressão com oporadores relacionais será sempre um resultado "boleano"(verdadeiro ou falso)
+
+# Identidade
+
+=== Verifica se os valores são identicos. Se são de mesmo tipo e valor atribuido. 
+!== Desigual restrito. Verifica se são de tipos diferentes.
+
+
+# Lógicos 
+
+! Negação (Operador unário. Após a o operador ou se coloca true ou false)
+!true --> false
+!false --> true
+
+&& Conjunção (Operador binário.) Trabalha com valores dos dois lados.
+true && true --> true
+true && false --> false
+false && true --> false
+false && false --> false
+ 
+|| Disjunção (Operador binário.) Trabalha com valores dos dois lados.
+true || true --> true
+true || false --> true
+false || true --> true
+false || false --> false 
+
+- A ordem de PRECEDÊNCIA dos oporadores lógico e:
+
+!, && e || 
+
+
+Ordem de precedência de todos os operadores:
+
+1° - Aritiméticos () ** /
+2° - Relacionais > < >=
+3° - Lógicos ! && ||
+
+
+# Ternário 
+
+?
+:
+
+- Este Operador junta três operandos. 
+Ex: teste ? true : false
+
+
+media >= 7 ? "Aprovado" : "Reprovado"
+
+
+Módulo C
+
+Vídeo 09
+
+>> DOM << 
+
+# DOM (Document Object Model)
+- Modele de objetos para documentos - Conjunto de objetos dentro do navegador.
+Ele dá acesso aos componentes internos do seu website. 
+- Não funciona dentro do Node.JS. 
+- Funciona quando rodamos JS dentro do navegador. 
+
+>> Árvore DOM << 
+Cada site deve ter uma Árvore DOM. E a raiz dentro do navegador se chama "window". Tudo dentro do JS está dentro da "window".
+A janela do navegador é um objeto DOM que se chama "window".
+
+>> Selecionar pelos elementos:
+
+por Marca -> getElementsByTagName() - Seleciona mais de um objeto.
+por ID -> getelementById() - Identifica o parágrafo ou div.
+por Nome -> getElementsByName() - Identifica e seleciona pelo nome.
+por Classe -> getElementsByClassName() - Seleciona por classe 
+por Seletor -> querySelector()/querySelectorAll() - Se for utilizar id se usar #, mas se for class usar o sinal de ponto final '.'
+
+
+Vídeo 10
+
+>> Eventos DOM << 
+
+- Tudo que possa acontecer com esse elemento. 
+Ex: Eventos de mouse. (quando o mouse entra, se movimenta ou clica neste elemento).
+(mouseenter, mousemove, mousedown(clicar e segurar), mouseup(soltar o clique), click, mouseout)
+
+Para disparar um eventeto é necessário entender o que é uma função em JavaScript.
+
+# Função - Conjuto de linhas de códigos que serão executados quanto os eventos ocorrerem. 
+Cada conjunto de linha de código chama-se de bloco. Não são executados automáticamente. 
+- Para que isso ocorra é necessario colocar essas linhas dentro de um bloco:
+
+Ex:  function ação (param){
+	bloco de códigos
+}
+
+(legendas: param = parêmtros)
+
+# Exemplo de elementos disparados pelo HTML: #
+
+<body>
+    <div id="area" onclick="clickhere()" onmouseenter="enter()" onmouseout="exit()">
+        Interact...
+    </div>
+
+    <script>
+        var a = window.document.getElementById("area")
+
+        function clickhere() {
+            a.innerText = "Clicked!"
+            a.style.background = 'red'
+        }
+        function enter() {
+            a.innerText = "Mouse In!"
+        }
+        function exit(){
+            a.innerText = "Mouse out!"
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+
+# Exemplo de elementos disparados por "Listeners" no JS: #
+
+<body>
+    <div id="area">
+        Interact...
+    </div>
+
+    <script>
+        var a = window.document.getElementById("area")
+        a.addEventListener('click', clickhere)
+        a.addEventListener('mouseenter', enter)
+        a.addEventListener('mouseout', exit)
+
+        function clickhere() {
+            a.innerText = "Clicked!"
+            a.style.background = 'red'
+        }
+        function enter() {
+            a.innerText = "Mouse In!"
+        }
+        function exit(){
+            a.innerText = "Mouse out!"
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+
+Exemplo 03..
+
+<body>
+    <h1>Adding Values</h1>
+    <input type="number" name="txtn1" id="txtn1"> + 
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="sum" onclick="sum()">
+    <div id= "res">Result</div>
+<script>
+    function sum(){
+        var tn1 = window.document.getElementById('txtn1')
+        var tn2 = window.document.querySelector('input#txtn2')
+        var res = window.document.getElementById('res')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1 + n2
+        res.innerHTML = `The sum between ${n1} and ${n2} is <strong>${s}</strong>.`
+    }
+</script>
+</body>
+
+Módulo B
+
+Vídeo 11
+
+>> Condições em JavaScript << Parte - 1
+
+
+# Condições Simples
+
+- Condições são desvios que o programa(código) tem para executar tarefa X ou Y a depender da informção que recebeu. 
+
+if(aaaaaaa){
+	true
+}else{
+	false
+}
+
+# Tipos de condição
+
+01. Ex. Condição Simles
+
+if(aaaaaa){
+	true
+}
+
+(Nesta condição o comando só será executado se a condição for true.)
+
+
+02. Ex. Condição
+
+if(aaaaaaa){
+	true
+}else{
+	false
+}
+
+(Nesta condição o comando executará uma ação para true e outra para false.)
+
+
+Vídeo 12
+
+# Condições - Parte II
+
+>> Condinções Aninhadas - Colocar várias condições dentro da outra. 
+Ex: 
+
+if(condição1){
+	bloco1
+}else{
+	if(condição2){
+		bloco2
+	}else{
+		bloco3
+	}
+}
+
+
+
+>> Condições Múltiplas - Trabalha com Valores fixos. 
+
+swicth(expressão){
+	case valo1: 
+		#bloco de códigos# (obs: dentro de cada bloco é obrigatório ter um comando "break")
+	case valor2:
+		#bloco de códigos# (obs: dentro de cada bloco é obrigatório ter um comando "break")
+	case valor3: 
+		#bloco de códigos# (obs: dentro de cada bloco é obrigatório ter um comando "break")
+	default: 
+		#bloco de códigos# (obs: dentro de cada bloco é obrigatório ter um comando "break")
+}
+
+
+- Este comando vai testar a "expressão" proposta em cada "case", assim que ela encontra o bloco de códico correto ela executa até encontrar o "break". Após isso, ela segue o curso normal do programa. 
+
+Exemplo Prático:
+
+console.log(diaSem)
+
+switch(diaSem){
+    case 0: 
+        console.log('Domingo')
+        break
+    case 1: 
+        console.log('Segunda')
+        break
+    case 2: 
+        console.log('Terça')    
+        break
+    case 3: 
+        console.log('Quarta')
+        break
+    case 4: 
+        console.log('Quinta')
+        break
+    case 5:
+        console.log('Sexta')
+    case 6:
+        console.log('Sábado')
+        break
+    default:
+        console.log('[ERRO] Dia Inválido!')
+        break
+}
+
+
+Módulo E
+
+>> Repetições(Laços) em JavaScript <<
+
+Vídeo 13
+
+- Funcionam testando condinções. Enquanto essas condições são verdadeiras. Caso mude para falsa, o programa segue seu fluxo.
+
+O nome dessa condição é: while(condição)
+
+# Repetições com teste lógico no início
+
+Ex: 
+
+while(condição){
+
+	BLOCO DE CÓDIGO.
+
+}  >> Quando termida de ser executado, o comando retronar para o início dessa função até que ela não seja verdadeira.
+
+
+
+Ex 2: 
+
+var c = 1
+while (c <= 6){
+    console.log(`Passo ${c}`) 
+    c++ //c = c + 1
+}
+
+
+# Repetições com teste lógico no final
+
+-Nesse contexto o programa executa o bloco de código primeiro e depois testa. Enquanto for verdade ele repete a ação. 
+
+Ex:
+
+do{
+	BLOCO DE CÓDIGO
+     while(condição)
+}
+
+
+Vídeo 14 
+
+>> Repetições(Laços) em JavaScript << Parte 2
+
+# Repetições com variável de controle
+
+- Nessa estrutura são feitas 3 ações:
+
+> Inicialização: 
+> Texte lógico:  
+> Incremento: 
+
+Ex: 
+
+for (inicio; teste; incr){
+
+	BLOCO DE CÓDIGOS
+} 
+
+- Esta estrutura, quando acionada, executa a inicialização e o teste primeiro. 
+- Em seguida executa o bloco de códico e retorna para o seu início, mas desta vez ela executa o incremento. 
+- Tudo isso enquanto o teste for VERDADEIRO. 
+
+Ex: 
+
+comparando duas estruturas: 
+
+1. 
+var c=1
+while (c<=10){
+	XXXXXXXXXXXXXX
+	c++ (c = c + 1)
+
+} 
+-----
+
+2. 
+for (var c=1;c<=10;c++){
+	XXXXXXXXXXXXXXXXX
+
+}
+
+
+Exercícios JavaScript 01 - Aula 14 
+
+
+
+
+
+CHANGES 
+CHANGES
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

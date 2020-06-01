@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries and Nationalities</title>
+</head>
+<body>
+    <h1>Are you from Brazil?</h1>
+    <p> Hello! Let me know whether you're Brazilian.</p>
+    Type your Name: <input type="text" name="name" id="name"></br>
+    Type your Country: <input type="text" name="country" id="country">
+    <input type="button" value="Verify" onclick="check()">
+
+    <div id="nation">
+
+    </div>
+    <script>
+        function check(){
+            var nome= window.document.querySelector("input#name")
+            var pais= window.document.querySelector("input#country")
+            var res = window.document.getElementById("nation")
+            res.innerHTML = `<p>Hello <strong> ${nome}</strong>, you live in ${pais}.</p>`
+            if(pais ="Brazil"){
+                res.innerHTML +=`<p>Yor Country is ${pais} and you are <strong>Brazilian</strong>.</p>`
+            }else{
+                res.innerHTML += `<P> You aren't from Brazil, but thanks for your participation.<p>`
+            }    
+        }
+    </script>
+
+</body>
+</html>

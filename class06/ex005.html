@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First stps with DOM</title>
+    <style> 
+        body{
+            background: rgba(8, 69, 199, 0.849);
+            color: white;
+            font: normal 14pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Starting Studies with DOM</h1>
+    <p>Result Here</p>
+    <P>Learning to use <strong>DOM</strong> in JavaScript.</P>
+    <div id='msg'>Click Here</div>
+    <Script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        /*var d = window.document.getElementById('msg')
+        window.document.write("It is written like this: " + p1.innerText)
+        corpo.style.background = "black"
+        p1.style.color = "yellow"
+        d.style.background = 'green'
+        //d.innerText = "I'm wating"
+        window.document.getElementById('msg').innerText = 'Hello!'
+        */
+
+       /* var d = window.document.getElementsByName('msg')[0]
+        d.innerText = 'Hello!'*/
+
+       /*var d = window.document.getElementsByClassName('msg')[0]
+        d.innerText = "Hello!"*/
+
+        var d = window.document.querySelector('div#msg') //Se for utilizar id se usar #, mas se for class usar o sinal de ponto final '.'
+        d.style.color = 'black'
+    </Script>
+</body>
+</html>
