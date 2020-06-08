@@ -647,18 +647,38 @@ Obs: Na maiorira das linguagens de progamação, as variáveis compostas começa
 - Índice ou Chaves(key) (númeração de cada espaço dentro da variável.
 
 let num = [5, 8, 2, 9, 3]
-num[5] = 10 - Para adicionar um valor em uma posição na variável. Porém é necessário dizer qual posição dentro do colchete. 
+num[5] = 10 - Para adicionar/mostar um valor em uma posição na variável. Porém é necessário dizer qual posição dentro do colchete. 
 num.push(6) - Para adicionar um valor na última posição na variável. 
-num.length - Atributo que serve para dizer o comprimento do array (numero de elementos dentro da varíavel). Em JS esse atributo não tem parênteses depois. 
+num.length - Atributo que serve para dizer o comprimento do array (numero de elementos dentro da varíavel). Em JS esse atributo não tem parênteses depois.
+num.sort() - Método interdo dos arrays que serve para colocar os elementos em ordem crescentes. 
+
+num.sort()
+num.push(1) 
+(Obs: a ordem entre num.sort() e num.push() vai definir se o elemento adicionado var ficar em ordem crescente ou não.
 console.log(num)
+console.log(`O vetor tem ${num.length} posições`)
+console.log(`O primeiro valor do vetor é ${num[0]}`)
+
+# Estrutura de respetição para Variável Composta #
+
+for ( let aaa=0; aaa<num.length; aaa++){
+	console.log(num[aaa])
+
+}
+
+- Outra maneira mais simples - 
+
+for (let aaa in num) { 
+console.log(num[aaa])
+
+}
+
+Obs >> a sintax 'for' serve apenas par array e objetos em JS(array e objetos em JS são a mesma coisa).
 
 
+- Buscar valores no array - 
 
-
-
-
-
-
+aaa.indexOf(x) - vai buscar o valor de 'x' dentro do array e devolve a posição que ele se encontra.
 
 
 
