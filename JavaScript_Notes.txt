@@ -625,13 +625,32 @@ for (var c=1;c<=10;c++){
 Exercícios JavaScript 01 - Aula 14 
 
 
+Módulo F
+
+Vídeo 15
+
+>> Avançando em JavaScript << 
 
 
+# Variáveis Compostas
+
+- Deve ser capaz de armazenar vários valores em uma estrutura. 
+
+Ex: var a [x,x,x] cada espaço dentro da variável recebe uma identificaçao, que chamamos de chaves ou índice. 
+Essas chaves são descritar por números: ex; 0,1,2,3...
+
+Obs: Na maiorira das linguagens de progamação, as variáveis compostas começam com o índice "0". 
 
 
+>> var a [0,1,2] - variável do tipo 'array'(vetor). 
+- O array é composto de elementos. Cada elemento agrupa um espaço da memória, o valor contido nele e o índice.
+- Índice ou Chaves(key) (númeração de cada espaço dentro da variável.
 
-
-
+let num = [5, 8, 2, 9, 3]
+num[5] = 10 - Para adicionar um valor em uma posição na variável. Porém é necessário dizer qual posição dentro do colchete. 
+num.push(6) - Para adicionar um valor na última posição na variável. 
+num.length - Atributo que serve para dizer o comprimento do array (numero de elementos dentro da varíavel). Em JS esse atributo não tem parênteses depois. 
+console.log(num)
 
 
 
