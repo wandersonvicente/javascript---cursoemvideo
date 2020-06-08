@@ -628,8 +628,6 @@ Exercícios JavaScript 01 - Aula 14
 
 
 
-CHANGES 
-CHANGES
 
 
 
