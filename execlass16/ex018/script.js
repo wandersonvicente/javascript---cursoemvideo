@@ -1,16 +1,3 @@
-/*
-mensagem de valor existente quando clicar adicionar
-msg de valor maior ou menor que 1 e 100 quando clicar adicionar (OK!!)
-quando adicionar um valor o resultato tem que sumir
-mensagem que não tem valor adicionado quando clicar adicionar e finalizar
------------------------------------
-resultados
-total de números cadastrados
-menor valor encontrado
-maior valor encontrado
-soma dos valores
-media dos valores
-*/
 
 let num = document.querySelector('input#fnum')
 let lista = document.querySelector('select#flista')
@@ -38,32 +25,44 @@ function inLista(n,l) {
 
 
 function adicionar() {
-    if(isNumero(num.value) && !inLista(num.valeu, valores)) {
-        
+    if(isNumero(num.value) && !inLista(num.value, valores)) {
+        valores.push(Number(num.value))
+        let item = document.createElement('option')
+        item.text = `Valor ${num.value} adicionado.`
+        lista.appendChild(item)
+        res.innerHTML = '' //aspas vaizas são para apagar o conteudo na página após finalizar a ação
     } else {
     window.alert('[ERRO] Número já existe ou não é válido! Por favor, digite outro número.')
     }
+    num.value = ''
+    num.focus()
 }
-    
 
-
-
-/*
-function calcular(s){
-    
-    
-    if(num.value.length == 0){
-        window.alert('[ERRO] Por favor digite um número!')
-    }else if (num.value.length == num){
-        window.alert('[ERRO] Número já existe! Por favor, digite outro número.')
-    }else{
-        let n = Number(num.valeu)
-        let s = n
-        let c = 1
-        sel.innerHTML = ''
-        while (s >= 1 && s <=100){
-            return 'n'
+function finalizar (){
+    if (valores.length == 0) {
+        window.alert('Adicione valores antes de finalizar!')
+    } else {
+        let tot = valores.length
+        let maior = valores[0]
+        let menor = valores[0]
+        let soma = 0
+        let media = 0 
+        for(let pos in valores) {
+            soma += valores[pos]
+            if (valores[pos] > maior)
+                maior = valores[pos]
+            if (valores[pos] < menor)
+            menor = valores[pos]   
         }
+        media = soma / tot
+        res.innerHTML = ''
+        res.innerHTML += `<P>Ao todo temos ${tot} números cadastrados.</p>`
+        res.innerHTML += `<p>O maior valor informado foi ${maior}.</p>`
+        res.innerHTML += `<P>O menor valor informado foi ${menor}.</p>`
+        res.innerHTML += `<p>A soma dos valores é ${soma}.`
+        res.innerHTML += `<P>A média dos valores digitados é ${media}.`
     }
+    
 }
-*/
+
+
